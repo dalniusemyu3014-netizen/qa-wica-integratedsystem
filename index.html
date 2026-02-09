@@ -3,40 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QA Control - WICA Pontianak</title>
+    <title>QA System - WICA Pontianak</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 p-5">
-    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold mb-6 text-blue-800 border-b-2 pb-2">QA Control Form</h2>
-        
-        <form id="qaForm" class="space-y-4">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold text-blue-900 mb-6 border-b-2 pb-2">QA Control Form</h1>
+        <form class="space-y-4">
             <div>
-                <label class="block font-semibold">Nama Pemeriksa</label>
-                <input type="text" name="inspector" class="w-full border p-2 rounded" required>
-            </div>
-
-            <div>
-                <label class="block font-semibold">Parameter Fisik (RBDPOL/CPKO)</label>
-                <select name="parameter" class="w-full border p-2 rounded">
-                    <option>Warna Sesuai Standar</option>
-                    <option>Bau Normal</option>
-                    <option>Kandungan Kotoran (Dirt Content)</option>
+                <label class="block text-sm font-medium text-gray-700">Jenis Produk</label>
+                <select class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                    <option>RBDPOL</option>
+                    <option>CPKO</option>
+                    <option>Stearin</option>
                 </select>
             </div>
-
             <div>
-                <label class="block font-semibold">Status Check</label>
-                <div class="flex gap-4 mt-1">
-                    <label><input type="radio" name="status" value="OK" checked> OK</label>
-                    <label><input type="radio" name="status" value="NOT OK"> NOT OK</label>
+                <label class="block text-sm font-medium text-gray-700">Parameter Fisik (Warna/Bau)</label>
+                <input type="text" placeholder="Masukkan hasil cek" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Status</label>
+                <div class="flex gap-4 mt-2">
+                    <label class="inline-flex items-center"><input type="radio" name="status" class="text-blue-600"> <span class="ml-2">OK</span></label>
+                    <label class="inline-flex items-center"><input type="radio" name="status" class="text-red-600"> <span class="ml-2">NOT OK</span></label>
                 </div>
             </div>
-
-            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 font-bold">
-                KIRIM LAPORAN
+            <button type="button" class="w-full bg-blue-800 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700">
+                SIMPAN DATA
             </button>
         </form>
     </div>
 </body>
-</html>   
+</html>
